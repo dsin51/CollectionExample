@@ -8,6 +8,7 @@ public class NursingHome {
 
 	private ArrayList<Doctor> doclist;
 	
+	
 	public NursingHome()
 	{
 		super();
@@ -22,11 +23,19 @@ public class NursingHome {
 	
 	public void printDoctorList() 
 	{
-		//Collections.sort(doclist);
+	
 		
 		for(Doctor doc :doclist)
 		{
-			System.out.println(doc);
+			if(doc.getPatients()!=null)
+			{
+				System.out.println(doc);
+				System.out.println("Appointments");
+				for(Patient pat:doc.getPatients())
+				{
+					System.out.println(pat);
+				}
+			}
 		}
 	}
 	

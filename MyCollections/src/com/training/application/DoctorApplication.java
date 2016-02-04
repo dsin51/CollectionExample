@@ -1,9 +1,12 @@
 package com.training.application;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 import com.training.Doctor;
 import com.training.NursingHome;
+import com.training.Patient;
 
 public class DoctorApplication {
 
@@ -20,6 +23,17 @@ public class DoctorApplication {
 		nursingHome.addDoctor(doc2);
 		nursingHome.addDoctor(doc3);
 		nursingHome.addDoctor(doc4);
+		
+		
+		Patient p1 = new Patient(901, "Gaurav", 90);
+		Patient p2 = new Patient(902, "Gaurav2", 90);
+		
+		TreeSet<Patient> patients = new TreeSet<Patient>();
+//		HashSet<Patient> patients = new HashSet<Patient>();
+		patients.add(p1);
+		patients.add(p2);
+		
+		doc1.setPatients(patients);
 		
 		nursingHome.printDoctorList();
 		
