@@ -27,21 +27,28 @@ public class DoctorApplication {
 		
 		Patient p1 = new Patient(901, "Gaurav", 90);
 		Patient p2 = new Patient(902, "Gaurav2", 90);
+		Patient p3 = new Patient(902, "Gaurav2", 90);
 		
 		TreeSet<Patient> patients = new TreeSet<Patient>();
 //		HashSet<Patient> patients = new HashSet<Patient>();
 		patients.add(p1);
 		patients.add(p2);
+		patients.add(p3);
+		
 		
 		doc1.setPatients(patients);
 		
 		nursingHome.printDoctorList();
 		
-		
-		Scanner sin = new Scanner(System.in);
-		System.out.println("Enter choice: 1/2/3");
-		int key = sin.nextInt();
-		nursingHome.printSortedList(key);
+		/**
+		 *
+		 * To sort according to required attribute
+		 * 
+		 */
+//		Scanner sin = new Scanner(System.in);
+//		System.out.println("Enter choice: 1/2/3");
+//		int key = sin.nextInt();
+//		nursingHome.printSortedList(key);
 	}
 
 }
